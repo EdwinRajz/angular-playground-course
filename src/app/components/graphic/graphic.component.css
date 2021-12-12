@@ -1,13 +1,21 @@
 .container {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  height: 500px;
 }
 
 :host {
-    margin: 24px 0;
+  margin: 24px 0;
 }
 
 .demo-chart {
-    width: 600px;
+  width: 600px;
 }
+
+.slide-toggler{
+  margin: 8px 0;
+  display: block;
+  color: orange;
+}
+

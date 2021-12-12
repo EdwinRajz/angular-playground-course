@@ -19,8 +19,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     GraphicComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
@@ -44,6 +46,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MatIconModule,
     MatMenuModule,
     HttpClientModule,
+    MatSlideToggleModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     })

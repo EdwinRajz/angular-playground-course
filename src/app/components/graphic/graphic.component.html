@@ -1,8 +1,14 @@
-<mat-card class="container">
-  <mat-card-title>
-    Graphic
+<mat-card *ngIf="title" class="container">
+  <mat-card-title [(ngModel)]="title">
+    {{title}}
   </mat-card-title>
   <mat-card-content>
     <div echarts [options]="options" [merge]="updateOptions" class="demo-chart"></div>
   </mat-card-content>
+  <mat-slide-toggle class="slide-toggler" [(ngModel)]="isChecked" (change)="toggleChartView()">{{updateOptions.legend.data}}
+  </mat-slide-toggle>
+</mat-card>
+
+<mat-card *ngIf="!title" class="container">
+  <h1>Select coin to display chart</h1>
 </mat-card>
